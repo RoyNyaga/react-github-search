@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Error = () => {
   return (
     <Wrapper>
-      <h1>404</h1>
+      <h1>404 do not forget to remove this stuf</h1>
       <h3>Sorry, the page you tried connot be found</h3>
       <Link to="/" className="btn">Back home</Link>
     </Wrapper>
