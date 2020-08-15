@@ -10,28 +10,28 @@ const UserInfo = () => {
   const items = [
     {
       id: 1,
-      icon: <GoRepo classname="icon"/>,
+      icon: <GoRepo className="icon"/>,
       label: "repos",
       value: public_repos,
       color: "pink"
     },
     {
       id: 2,
-      icon: <FiUsers classname="icon"/>,
+      icon: <FiUsers className="icon"/>,
       label: "followers",
       value: followers,
       color: "green"
     },
     {
       id: 3,
-      icon: <FiUserPlus classname="icon"/>,
+      icon: <FiUserPlus className="icon"/>,
       label: "following",
       value: following,
       color: "purple"
     },
     {
-      id: 1,
-      icon: <GoGist classname="icon"/>,
+      id: 4,
+      icon: <GoGist className="icon"/>,
       label: "gist",
       value: public_gits,
       color: "yellow"
@@ -40,7 +40,7 @@ const UserInfo = () => {
   return <section className="section">
           <Wrapper className="section-center">
             {items.map((item) => {
-              return <p>item</p>
+              return <Item key={item.id} {...item}></Item>
             })}
           </Wrapper>
         </section>;
