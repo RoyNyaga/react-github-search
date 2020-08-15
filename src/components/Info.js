@@ -7,7 +7,7 @@ import { FiUsers, FiUserPlus } from 'react-icons/fi';
 const UserInfo = () => {
   const {githubUser} = React.useContext(GithubContext)
   const {public_repos, followers, following, public_gits} = githubUser
-  const item = [
+  const items = [
     {
       id: 1,
       icon: <GoRepo classname="icon"/>,
@@ -37,8 +37,24 @@ const UserInfo = () => {
       color: "yellow"
     }
   ]
-  return <h2></h2>;
+  return <section className="section">
+          <Wrapper className="section-center">
+            {items.map((item) => {
+              return <p>item</p>
+            })}
+          </Wrapper>
+        </section>;
 };
+
+const Item = ({icon,label,value,color}) => {
+  return <article className="item">
+            <span className={color}>{icon}</span>
+            <div>
+              <h3>{value}</h3>
+              <p>{label}</p>
+            </div>
+          </article>
+}
 
 const Wrapper = styled.section`
   display: grid;
