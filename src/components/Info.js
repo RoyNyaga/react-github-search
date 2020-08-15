@@ -7,6 +7,36 @@ import { FiUsers, FiUserPlus } from 'react-icons/fi';
 const UserInfo = () => {
   const {githubUser} = React.useContext(GithubContext)
   const {public_repos, followers, following, public_gits} = githubUser
+  const item = [
+    {
+      id: 1,
+      icon: <GoRepo classname="icon"/>,
+      label: "repos",
+      value: public_repos,
+      color: "pink"
+    },
+    {
+      id: 2,
+      icon: <FiUsers classname="icon"/>,
+      label: "followers",
+      value: followers,
+      color: "green"
+    },
+    {
+      id: 3,
+      icon: <FiUserPlus classname="icon"/>,
+      label: "following",
+      value: following,
+      color: "purple"
+    },
+    {
+      id: 1,
+      icon: <GoGist classname="icon"/>,
+      label: "gist",
+      value: public_gits,
+      color: "yellow"
+    }
+  ]
   return <h2></h2>;
 };
 
