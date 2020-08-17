@@ -1,7 +1,6 @@
 // STEP 1 - Include Dependencies
 // Include react
 import React from "react";
-import ReactDOM from "react-dom";
 
 // Include the react-fusioncharts component
 import ReactFC from "react-fusioncharts";
@@ -80,11 +79,9 @@ const chartConfigs = {
   }
 };
 
-// STEP 4 - Creating the DOM element to pass the react-fusioncharts component
-class App extends React.Component {
-  render() {
-    return (<ReactFC {...chartConfigs} />);
-  }
+const ChartComponent = () => {
+	return (<ReactFC {...chartConfigs} />);
 }
 
-export default App;
+
+export default ChartComponent;
