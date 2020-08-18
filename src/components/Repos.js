@@ -8,12 +8,20 @@ const Repos = () => {
     const { language } = item;
     if(!language)return total //Do nothing is the language property is null
     if(!total[language]){
-      total[language] = 1;
+      total[language] = {label: language, value: 1};
     }else{
-      total[language] = total[language] + 1
+      total[language] = {
+        ...total[language], 
+        value: total[language].value + 1
+      }
     }
     return total
   },{})
+
+  //Oject.values extracts the nested objects and spreads them in an array 
+  languages = Object.values(languages).sort((a,b)=>{
+    return b.value - a.value
+  }).slice(0,5)
   console.log(languages)
   const chartData = [
     {
@@ -31,7 +39,7 @@ const Repos = () => {
   ];
   return <section className="section">
             <Wrapper className="section-center">
-              <Pie3D data={chartData}/>
+              <Pie3D data={languages}/>
             </Wrapper>
           </section>
 }; 
