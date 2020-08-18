@@ -5,7 +5,7 @@ import { ExampleChart, Pie3D, Column3D, Bar3D, Doughnut2D } from './Charts';
 const Repos = () => {
   const{repos} = React.useContext(GithubContext)
   let languages = repos.reduce((total,item)=>{
-    const { language } = item;
+    const { language, stargazers_count } = item;
     if(!language)return total //Do nothing is the language property is null
     if(!total[language]){
       total[language] = {label: language, value: 1};
@@ -18,7 +18,8 @@ const Repos = () => {
     return total
   },{})
 
-  //Oject.values extracts the nested objects and spreads them in an array 
+  //Oject.values places the values of an object in an array 
+  //them in an array. Slice returns the first five elements
   languages = Object.values(languages).sort((a,b)=>{
     return b.value - a.value
   }).slice(0,5)
@@ -38,8 +39,11 @@ const Repos = () => {
     }
   ];
   return <section className="section">
-            <Wrapper className="section-center">
+            <Wrapper className="section-center">          
               <Pie3D data={languages}/>
+              <div></div>
+              <Doughnut2D data={chartData}/>
+            <div></div>
             </Wrapper>
           </section>
 }; 
