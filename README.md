@@ -113,3 +113,22 @@ package.json
 ```
 
 [create-react-app Warning Fix Blog Post](https://community.netlify.com/t/how-to-fix-build-failures-with-create-react-app-in-production/17752)
+
+<!-- deb http://security.ubuntu.com/ubuntu disco-security main restricted -->
+<!-- # deb-src http://security.ubuntu.com/ubuntu disco-security main restricted
+deb http://security.ubuntu.com/ubuntu disco-security universe
+# deb-src http://security.ubuntu.com/ubuntu disco-security universe
+deb http://security.ubuntu.com/ubuntu disco-security multiverse
+# deb-src http://security.ubuntu.com/ubuntu disco-security multiverse
+ -->
+ deb http://cm.archive.ubuntu.com/ubuntu/ disco main restricted
+# deb-src http://cm.archive.ubuntu.com/ubuntu/ disco main restricted
+deb http://cm.archive.ubuntu.com/ubuntu/ disco universe
+# deb-src http://cm.archive.ubuntu.com/ubuntu/ disco universe
+deb http://cm.archive.ubuntu.com/ubuntu/ disco-updates universe
+# deb-src http://cm.archive.ubuntu.com/ubuntu/ disco-updates universe
+deb http://cm.archive.ubuntu.com/ubuntu/ disco multiverse
+# deb-src http://cm.archive.ubuntu.com/ubuntu/ disco multiverse
+deb http://cm.archive.ubuntu.com/ubuntu/ disco-updates multiverse
+# deb-src http://cm.archive.ubuntu.com/ubuntu/ disco-updates multiverse
+# deb-src http://cm.archive.ubuntu.com/ubuntu/ disco-backports main restricted universe multiverse
