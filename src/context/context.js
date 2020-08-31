@@ -25,12 +25,16 @@ const GithubProvider = ({children}) => {
 			let { rate: { remaining }, } = data // notice this destructuring format
 			setRequests(remaining)
 			if(remaining === 0){
-				// throw an error
+				toggleError(true, "sorry, you have exceeded your hourly rate limit!")
 			}
 		})
 		.catch((err) => {
 			console.log(err);
 		});
+	}
+
+	function toggleError(show, msg){
+		setError({ show, msg })
 	}
 	
 	useEffect(checkRequests, [])
