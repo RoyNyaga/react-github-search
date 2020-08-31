@@ -7,7 +7,6 @@ const Search = () => {
   // get things from global context
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(user)
   }
   return <section className="section">
           <Wrapper className="section-center">
