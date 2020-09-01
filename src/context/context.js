@@ -22,8 +22,8 @@ const GithubProvider = ({children}) => {
 	const searchGihubUser = async (user) => {
 		// toggleError
 		// setLoading(true)
-		const response = await axios(`${rootUrl}/users${user}`)
-		.catch(err => response.log(err))
+		const response = await axios(`${rootUrl}/users/${user}`)
+		.catch(err => console.log(err))
 		console.log(response);
 		if(response){
 			setGithubUser(response.data)
