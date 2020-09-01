@@ -15,12 +15,13 @@ const GithubProvider = ({children}) => {
 	
 	// request loading
 	const [requests, setRequests] = useState(0);
-	const [loading, setIslaoding] = useState(false);
+	const [isLoading, setIslaoding] = useState(true);
 	// error
 	const [error,setError] = useState({show:false, mgs: ""})
 
 	const searchGihubUser = async (user) => {
 		// toggleError
+		toggleError()
 		// setLoading(true)
 		const response = await axios(`${rootUrl}/users/${user}`)
 		.catch(err => console.log(err))
