@@ -15,22 +15,29 @@ const GithubProvider = ({children}) => {
 	
 	// request loading
 	const [requests, setRequests] = useState(0);
-	const [isLoading, setIslaoding] = useState(true);
+	const [isLoading, setIslaoding] = useState(false);
 	// error
 	const [error,setError] = useState({show:false, mgs: ""})
 
 	const searchGihubUser = async (user) => {
 		// toggleError
 		toggleError()
-		// setLoading(true)
+		setIslaoding(true)
+
 		const response = await axios(`${rootUrl}/users/${user}`)
 		.catch(err => console.log(err))
 		console.log(response);
 		if(response){
 			setGithubUser(response.data)
+			//repos
+			// https://api.github.com/users/john-smilga/repos?per_page=100
+			// Followers
+			// https://api.github.com/users/john-smilga/followers
 		}else{
 			toggleError(true, "there is no user with such Name")
 		}
+		checkRequests();
+		setIslaoding(false)
 
 	}
 	// check rate
@@ -60,7 +67,8 @@ const GithubProvider = ({children}) => {
 			followers, 
 			requests, 
 			error, 
-			searchGihubUser 
+			searchGihubUser,
+			isLoading
 		}}>{children}</GithubContext.Provider>
 		) 
 }
