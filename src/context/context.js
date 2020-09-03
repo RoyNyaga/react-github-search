@@ -32,10 +32,14 @@ const GithubProvider = ({children}) => {
 			const { login, followers_url } = response.data;
 			// repos
 			axios(`${rootUrl}/users/${login}/repos?per_page=100`)
-			.then(response => console.log(response,"repos"))
+			.then(response => 
+				setRepos(response.data)	
+			)
 			//followers
 			axios(`${followers_url}?per_page=100`)
-			.then(response => console.log(response,"followers"))
+			.then(response => 
+				setFollowers(response.data)	
+			)
 			//repos
 			// https://api.github.com/users/john-smilga/repos?per_page=100
 			// Followers
