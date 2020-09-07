@@ -180,4 +180,5 @@ p {
 }
 main {
   padding-bottom: 2rem;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(https://res.cloudinary.com/it-s-tech/image/upload/v1594776845/Group-Itstech/fashion-art-coffee-macbook-pro-57690_rvsw0z.jpg) center/cover no-repeat fixed;
 }
