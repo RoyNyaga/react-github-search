@@ -1,11 +1,16 @@
-## Starter Project
+# Search Github Users
 
-- css provided (global styles, styled components)
-- folders/files already setup
-- all imports included (warnings)
-- index.js for easier imports
+<img src="https://res.cloudinary.com/it-s-tech/image/upload/v1599488132/Screen_Shot_2020-09-07_at_3.13.58_PM_sdrlpy.png">
 
-## Styled Components
+### About
+Simple application that utilizes the github API to provide github users searched in the search input field. It also displays the characteristics of the repositories of a github user through charts. Athentication is required to access the apps dashboard.
+
+### Live Demo. 
+click [here](https://confident-hermann-9c1ff6.netlify.app) to see the live version.
+
+### Main Teachnologies
+
+#### Styled Components
 
 [Styled-Components - Main Docs](https://styled-components.com/)
 
@@ -26,7 +31,7 @@ write your styles here
 export default ReactComponent
 ```
 
-## React Icons
+#### React Icons
 
 [React Icons - Main Docs](https://react-icons.github.io/react-icons/)
 
@@ -35,7 +40,7 @@ import { FiUsers, FiUserPlus } from 'react-icons/fi';
 <FiUsers className='nameOfTheClass'> </FiUsers>;
 ```
 
-## React Router Dom
+#### React Router Dom
 
 version used - "react-router-dom": "^5.2.0",
 
@@ -44,7 +49,7 @@ version used - "react-router-dom": "^5.2.0",
 - <Switch> renders the first child <Route> that matches
 - A <Route path="*"> always matches
 
-## Gihthub API
+#### Gihthub API
 
 - [Root Endpoint](https://api.github.com)
 - [Get User](https://api.github.com/users/wesbos)
@@ -54,14 +59,14 @@ version used - "react-router-dom": "^5.2.0",
 
   For unauthenticated requests, the rate limit allows for up to 60 requests per hour. Unauthenticated requests are associated with the originating IP address, and not the user making requests.
 
-## Fusion Charts
+#### Fusion Charts
 
 - [Fusion Charts - Main Docs](https://www.fusioncharts.com/)
 - [First React Chart](https://www.fusioncharts.com/dev/getting-started/react/your-first-chart-using-react)
 - [List Of Charts](https://www.fusioncharts.com/dev/chart-guide/list-of-charts)
 - [Themes](https://www.fusioncharts.com/dev/themes/introduction-to-themes)
 
-## Auth0
+#### Auth0
 
 - [Auth0 - Main Docs](https://auth0.com/)
 
@@ -84,11 +89,11 @@ version used - "react-router-dom": "^5.2.0",
 - [React SDK Docs](https://auth0.com/docs/libraries/auth0-react)
 - [REACT SDK API Docs](https://auth0.github.io/auth0-react/)
 
-## Deployment
+#### Deployment
 
 [Netlify](https://www.netlify.com/)
 
-## Additional Info
+#### Additional Info
 
 #### Redirects with react-router-dom
 
@@ -121,14 +126,10 @@ deb http://security.ubuntu.com/ubuntu disco-security universe
 deb http://security.ubuntu.com/ubuntu disco-security multiverse
 # deb-src http://security.ubuntu.com/ubuntu disco-security multiverse
  -->
- deb http://cm.archive.ubuntu.com/ubuntu/ disco main restricted
-# deb-src http://cm.archive.ubuntu.com/ubuntu/ disco main restricted
-deb http://cm.archive.ubuntu.com/ubuntu/ disco universe
-# deb-src http://cm.archive.ubuntu.com/ubuntu/ disco universe
-deb http://cm.archive.ubuntu.com/ubuntu/ disco-updates universe
-# deb-src http://cm.archive.ubuntu.com/ubuntu/ disco-updates universe
-deb http://cm.archive.ubuntu.com/ubuntu/ disco multiverse
-# deb-src http://cm.archive.ubuntu.com/ubuntu/ disco multiverse
-deb http://cm.archive.ubuntu.com/ubuntu/ disco-updates multiverse
-# deb-src http://cm.archive.ubuntu.com/ubuntu/ disco-updates multiverse
-# deb-src http://cm.archive.ubuntu.com/ubuntu/ disco-backports main restricted universe multiverse
+ 
+ ### Author
+
+:bust_in_silhouette: [Nyaga Andre Roy](https://github.com/RoyNyaga)
+* Gihub: [RoyNyaga](https://github.com/RoyNyaga)
+* Email: [nyagaandreroy@gmail.com](mailto:nyagaandreroy@gmail.com)
+* Linkedin: [Roy Nyaga](https://www.linkedin.com/in/roy-nyaga-andre/)
